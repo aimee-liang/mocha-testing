@@ -11,6 +11,7 @@ arrays.isItAnArray = arr => {
     if (!Array.isArray(arr)){
         return undefined
     }
+    return Array.isArray(arr)
 }
 
 module.exports = arrays

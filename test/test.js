@@ -63,5 +63,11 @@ describe('Array Methods', function(){
     it ('should return undefined if array is empty', function(){
       assert.equal(undefined, arrays.length([]))
     })
+    it ('should return undefined if array is not an array', function(){
+      assert.equal(undefined, arrays.isItAnArray('abc'))
+    })
+    it ('should return true if array is an array', function(){
+      assert.equal(true, arrays.isItAnArray([1,2,3]))
+    })
   })
 })
