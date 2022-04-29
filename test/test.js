@@ -1,5 +1,6 @@
 var assert = require('assert');
 let convert = require('../app')
+let arrays = require('../arrays')
 
 describe('Array', function() {
   describe('#indexOf()', function() {
@@ -49,6 +50,18 @@ describe('Temperature Conversion', function(){
     })
     it ('should return undefined if no temperature is passed in as an argument', function(){
       assert.equal(undefined, convert.fToC(''))
+    })
+  })
+})
+
+
+describe('Array Methods', function(){
+  describe('length', function(){
+    it ('should return array length', function(){
+      assert.equal(5, arrays.length([0, 1, 2, 3, 4]))
+    })
+    it ('should return undefined if array is empty', function(){
+      assert.equal(undefined, arrays.length([]))
     })
   })
 })
